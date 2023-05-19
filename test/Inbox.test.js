@@ -28,16 +28,24 @@ describe("Inbox contract", () => {
   });
 
   it("has correct default message", async () => {
+    // act
     const message = await inboxContract.methods.message().call();
+
+    // assert
     assert.equal(message, INITIAL_MESSAGE);
   });
 
   it("modifies the message correctly", async () => {
+    // arrange
     let modifiedMessage = "bye";
+
+    // act
     await inboxContract.methods
       .setMessage(modifiedMessage)
       .send({ from: accounts[0] });
     const message = await inboxContract.methods.message().call();
+
+    // assert
     assert.equal(message, modifiedMessage);
   });
 });
