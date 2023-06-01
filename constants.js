@@ -1,0 +1,5 @@
+const GOERLI_URL =
+  "https://sepolia.infura.io/v3/b2c188a795e44ef7b9bf0b0982cf1eab";
+const CONTRACT_DEPLOYED_ADDRESS = "0x1894D2001DfAB5E07fb8B98E533941d49Da6630d";
+
+module.exports = { ACCOUNT_MNEUMONIC, GOERLI_URL };

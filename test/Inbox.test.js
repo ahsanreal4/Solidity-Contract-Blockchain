@@ -23,11 +23,11 @@ beforeEach(async () => {
 });
 
 describe("Inbox contract", () => {
-  it("is the contract deployed", () => {
+  it("contract deploys correctly", () => {
     assert.ok(inboxContract.options.address);
   });
 
-  it("has correct default message", async () => {
+  it("correct default message", async () => {
     // act
     const message = await inboxContract.methods.message().call();
 
@@ -37,7 +37,7 @@ describe("Inbox contract", () => {
 
   it("modifies the message correctly", async () => {
     // arrange
-    let modifiedMessage = "bye";
+    const modifiedMessage = "bye";
 
     // act
     await inboxContract.methods
